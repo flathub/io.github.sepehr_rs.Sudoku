@@ -43,7 +43,7 @@
               {
                   "type": "git",
                   "url": "https://github.com/sepehr-rs/Sudoku.git",
-                  "commit": "8ffe38453dbd533c312cb334537ffa095c50ff01"
+                  "commit": "489af4af64cb54afe262fe896a07deed168adc4e"
               }
           ]
       }
