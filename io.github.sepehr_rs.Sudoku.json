@@ -9,7 +9,7 @@
       "--socket=fallback-x11",
       "--device=dri",
       "--socket=wayland",
-      "--filesystem=app"
+      "--filesystem=xdg-data"
   ],
   "cleanup": [
       "/include",
