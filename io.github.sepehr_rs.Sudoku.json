@@ -1,7 +1,7 @@
 {
   "app-id": "io.github.sepehr_rs.Sudoku",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "48",
+  "runtime-version": "49",
   "sdk": "org.gnome.Sdk",
   "command": "sudokugame",
   "finish-args": [
@@ -24,18 +24,6 @@
   "modules": [
       "python3-requirements.json",
       {
-          "name": "blueprint-compiler",
-          "buildsystem": "meson",
-          "cleanup": ["*"],
-          "sources": [
-              {
-                  "type": "git",
-                  "url": "https://gitlab.gnome.org/GNOME/blueprint-compiler",
-                  "tag": "0.18.0"
-              }
-          ]
-      },
-      {
           "name": "sudokugame",
           "buildsystem": "meson",
           "builddir": true,
@@ -44,6 +32,10 @@
                   "type": "git",
                   "url": "https://github.com/sepehr-rs/Sudoku.git",
                   "commit": "242e86b9aee3926a0e68cb21e2be096710430f5a"
+              },
+              {
+                  "type": "patch",
+                  "path": "fix-metainfo.diff"
               }
           ]
       }
