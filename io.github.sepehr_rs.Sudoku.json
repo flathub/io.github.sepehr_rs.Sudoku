@@ -1,28 +1,39 @@
 {
-    "app-id": "io.github.sepehr_rs.Sudoku",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "50",
-    "sdk": "org.gnome.Sdk",
-    "command": "sudokugame",
-    "finish-args": [
-        "--share=ipc",
-        "--socket=fallback-x11",
-        "--device=dri",
-        "--socket=wayland"
-    ],
-    "modules": [
-        "python3-requirements.json",
-        {
-            "name": "sudokugame",
-            "buildsystem": "meson",
-            "builddir": true,
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/sepehr-rs/Sudoku.git",
-                    "commit": "3bb3bb28c117c67a3fe5bafb4b57117a02bed747"
-                }
-            ]
-        }
-    ]
+  "app-id": "io.github.sepehr_rs.Sudoku",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "50",
+  "sdk": "org.gnome.Sdk",
+  "command": "sudokugame",
+  "finish-args": [
+      "--share=ipc",
+      "--socket=fallback-x11",
+      "--device=dri",
+      "--socket=wayland"
+  ],
+  "cleanup": [
+      "/include",
+      "/lib/pkgconfig",
+      "/man",
+      "/share/doc",
+      "/share/gtk-doc",
+      "/share/man",
+      "/share/pkgconfig",
+      "*.la",
+      "*.a"
+  ],
+  "modules": [
+      "python3-requirements.json",
+      {
+          "name": "sudokugame",
+          "buildsystem": "meson",
+          "builddir": true,
+          "sources": [
+              {
+                  "type": "git",
+                  "url": "https://github.com/sepehr-rs/Sudoku.git",
+                  "commit": "3bb3bb28c117c67a3fe5bafb4b57117a02bed747"
+              }
+          ]
+      }
+  ]
 }
